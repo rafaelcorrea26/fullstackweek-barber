@@ -7,8 +7,7 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
-  url       = env("DATABASE_URL") // with pooling
-  directUrl = env("DIRECT_DATABASE_URL") // no pooling, used for migrations
+  url       = env("DATABASE_URL") 
 }
 model User {
   id            String    @id @default(cuid())
